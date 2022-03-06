@@ -51,3 +51,21 @@ var app6 = new Vue({
         inputData: ""
     }
 })
+
+// component vuejs
+// component name must rename like this
+// ex: supercompo, super-compo
+Vue.component('supercompo', {
+    props: ['singleitem'],
+    template: '<li>{{ singleitem.message }}</li>'
+})
+  
+var app7 = new Vue({
+    el: '#app7',
+    data: {
+      itemList: [
+        { id: 0, message: 'Admin' },
+        { id: 1, message: 'User' },
+      ]
+    }
+  })
