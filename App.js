@@ -55,6 +55,7 @@ var app6 = new Vue({
 // component vuejs
 // component name must rename like this
 // ex: supercompo, super-compo
+// component toàn cục
 Vue.component('supercompo', {
     props: ['singleitem'],
     template: '<li>{{ singleitem.message }}</li>'
@@ -68,4 +69,17 @@ var app7 = new Vue({
         { id: 1, message: 'User' },
       ]
     }
+  })
+
+  // component cục bộ
+
+  var ComponentA = {}
+  var ComponentB = {}
+
+  new Vue({
+      el: "#app",
+      components: {
+          'component-a': ComponentA,
+          'component-b': ComponentB
+      }
   })
